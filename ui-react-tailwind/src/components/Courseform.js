@@ -16,7 +16,7 @@ function Courseform() {
     const handleSubmit = (event) => {
         event.preventDefault();
         const newFormData = { ...formData, term: termvalue };
-        axios.post('http://127.0.0.1:8000/api/courses', newFormData)
+        axios.post('https://project-1-backend-uvli.onrender.com/api/courses', newFormData)
           .then(response => {
             navigate('/courses/');
             // do something with the response

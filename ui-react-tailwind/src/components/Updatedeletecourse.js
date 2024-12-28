@@ -14,7 +14,7 @@ function Updatedeletecourse() {
   });
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:8000/api/courses/${id}`)
+    axios.get(`https://project-1-backend-uvli.onrender.com/api/courses/${id}`)
       .then(response => {
         const data = response.data[0];
         setFormData({
@@ -32,7 +32,7 @@ function Updatedeletecourse() {
 
   const handleUpdate = (event) => {
     event.preventDefault();
-    axios.put(`http://127.0.0.1:8000/api/courses/${id}`, formData)
+    axios.put(`https://project-1-backend-uvli.onrender.com/api/courses/${id}`, formData)
       .then(response => {
         navigate('/courses/');
       })
@@ -43,7 +43,7 @@ function Updatedeletecourse() {
 
   const handleDelete = (event) => {
     event.preventDefault();
-    axios.delete(`http://127.0.0.1:8000/api/courses/${id}`)
+    axios.delete(`https://project-1-backend-uvli.onrender.com/api/courses/${id}`)
       .then(response => {
         navigate('/courses/');
       })

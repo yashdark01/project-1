@@ -12,7 +12,7 @@ function Courses() {
     }, []);
   
     const getCourses = () => {
-      axios.get('http://127.0.0.1:8000/api/courses')
+      axios.get('https://project-1-backend-uvli.onrender.com/api/courses')
         .then(response => {
           setCourses(response.data);
         })
