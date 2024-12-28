@@ -1,3 +1,8 @@
-base = "frontend"  # Set your base directory here
-  publish = "build"
+[build]
   command = "npm run build"
+  publish = "build"  # Adjust this to your build output directory
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
