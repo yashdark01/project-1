@@ -19,11 +19,9 @@ function Courseform() {
         axios.post('https://project-1-backend-uvli.onrender.com/api/courses', newFormData)
           .then(response => {
             navigate('/courses/');
-            // do something with the response
           })
           .catch(error => {
             console.error(error);
-            // handle the error
           });
       };
     
